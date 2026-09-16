@@ -1,14 +1,1150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Unibond Technologies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unibond Technologies | Technology Consulting & Solution Partnerships</title>
+
+    <meta name="description" content="Unibond Technologies connects technology companies, solution providers and project partners across e-governance, smart infrastructure and digital transformation opportunities.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #172033;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e8ebf0;
+        }
+
+        nav {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #10213f;
+        }
+
+        .logo span {
+            color: #1769e0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #1769e0;
+        }
+
+        .nav-button {
+            background: #1769e0;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 7px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(23,105,224,.16), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(47,145,255,.10), transparent 30%),
+                #f7faff;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 30px;
+            background: #eaf2ff;
+            color: #1769e0;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(44px, 7vw, 76px);
+            line-height: 1.05;
+            letter-spacing: -3px;
+            color: #0d1b34;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #1769e0;
+        }
+
+        .hero p {
+            max-width: 690px;
+            font-size: 19px;
+            color: #5c677b;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 7px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .25s;
+        }
+
+        .btn-primary {
+            background: #1769e0;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #d5dce8;
+            background: white;
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-label {
+            color: #1769e0;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.15;
+            color: #101d35;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            color: #667085;
+            max-width: 800px;
+            font-size: 17px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: #f6f9fe;
+            border: 1px solid #e5ebf5;
+            border-radius: 18px;
+            padding: 42px;
+        }
+
+        .about-box h3 {
+            font-size: 28px;
+            margin-bottom: 18px;
+            color: #14233e;
+        }
+
+        .about-box p {
+            color: #667085;
+            margin-bottom: 15px;
+        }
+
+        /* FOCUS AREAS */
+
+        .focus {
+            background: #f7f9fc;
+        }
+
+        .cards {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5eaf2;
+            border-radius: 14px;
+            padding: 30px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(25,55,100,.09);
+        }
+
+        .card-number {
+            color: #1769e0;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #14233e;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #687386;
+            font-size: 15px;
+        }
+
+        /* WHAT WE DO */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 45px;
+        }
+
+        .service-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e8ecf2;
+        }
+
+        .service-icon {
+            min-width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #eaf2ff;
+            color: #1769e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+        }
+
+        .service-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .service-item p {
+            color: #687386;
+            font-size: 15px;
+        }
+
+        /* PARTNERS */
+
+        .partners {
+            background: #f7f9fc;
+        }
+
+        .partner-grid {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .partner {
+            background: white;
+            border: 1px solid #e4e9f0;
+            padding: 22px;
+            border-radius: 10px;
+            font-weight: 700;
+            color: #263550;
+        }
+
+        /* WHY */
+
+        .why-grid {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            padding: 30px;
+            border: 1px solid #e5eaf2;
+            border-radius: 13px;
+        }
+
+        .why-item h3 {
+            margin-bottom: 8px;
+            font-size: 19px;
+        }
+
+        .why-item p {
+            color: #687386;
+            font-size: 15px;
+        }
+
+        /* APPROACH */
+
+        .approach {
+            background: #10213f;
+            color: white;
+        }
+
+        .approach .section-label {
+            color: #75adff;
+        }
+
+        .approach .section-title {
+            color: white;
+        }
+
+        .approach .section-text {
+            color: #c4cede;
+        }
+
+        .steps {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .step {
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 12px;
+            padding: 28px;
+            background: rgba(255,255,255,.04);
+        }
+
+        .step span {
+            font-size: 30px;
+            font-weight: 800;
+            color: #75adff;
+        }
+
+        .step h3 {
+            margin: 12px 0 8px;
+        }
+
+        .step p {
+            color: #c4cede;
+            font-size: 14px;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 90px 0;
+            background: #1769e0;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(34px, 5vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: auto auto 30px;
+            color: #e4efff;
+            font-size: 17px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: #1769e0;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 45px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            border: 1px solid #e4e9f0;
+            border-radius: 13px;
+        }
+
+        .contact-row {
+            margin-bottom: 22px;
+        }
+
+        .contact-row small {
+            display: block;
+            color: #1769e0;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .contact-row strong {
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b172b;
+            color: white;
+            padding: 45px 0 25px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: #75adff;
+        }
+
+        .footer-tagline {
+            margin-top: 10px;
+            color: #aab6c9;
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 20px;
+            color: #8f9db3;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid,
+            .services-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .partner-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .cards,
+            .partner-grid,
+            .why-grid,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                padding: 28px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Welcome to Unibond Technologies</h1>
+<header>
+    <div class="container">
+        <nav>
+            <a href="#home" class="logo">
+                UNIBOND <span>TECHNOLOGIES</span>
+            </a>
 
-    <p>Our website is coming soon.</p>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#focus">Focus Areas</a></li>
+                <li><a href="#services">What We Do</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#why">Why Unibond</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                TECHNOLOGY CONSULTING · SOLUTION PARTNERSHIPS
+            </div>
+
+            <h1>
+                Connecting Technology.<br>
+                <span>Enabling Opportunities.</span>
+            </h1>
+
+            <p>
+                Unibond Technologies works with technology companies,
+                solution providers, system integrators and project partners
+                across e-governance, smart infrastructure and digital
+                transformation opportunities.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#focus" class="btn btn-primary">
+                    Explore Our Solutions
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Partner With Us
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+                <div class="section-label">About Unibond</div>
+
+                <h2 class="section-title">
+                    Connecting requirements with the right technology.
+                </h2>
+
+                <p class="section-text">
+                    Unibond Technologies is a technology provider, consulting
+                    and solution-partnering company focused on government,
+                    infrastructure and technology-led projects.
+                </p>
+            </div>
+
+            <div class="about-box">
+
+                <h3>Our Approach</h3>
+
+                <p>
+                    Our aim is to connect the right requirement with the right
+                    technology and the right set of partners.
+                </p>
+
+                <p>
+                    We work with OEMs, software companies, system integrators,
+                    implementation agencies and other industry partners
+                    depending on the needs of a project.
+                </p>
+
+                <p>
+                    Instead of being limited to one product or technology,
+                    we focus on understanding the opportunity and building
+                    a suitable solution ecosystem around it.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOCUS AREAS -->
+
+<section class="focus" id="focus">
+    <div class="container">
+
+        <div class="section-label">Our Focus Areas</div>
+
+        <h2 class="section-title">
+            Technology across multiple solution domains.
+        </h2>
+
+        <p class="section-text">
+            We work across a wide range of technology and smart-infrastructure
+            areas, bringing together suitable products, platforms, partners
+            and implementation capabilities.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Smart Mobility & Traffic Solutions</h3>
+                <p>
+                    Traffic enforcement, ANPR, speed enforcement, intelligent
+                    transport systems, traffic monitoring, adaptive traffic
+                    management and related solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>Smart Parking</h3>
+                <p>
+                    Parking management systems, access control, payment
+                    integration, parking guidance and enforcement solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>E-Governance Solutions</h3>
+                <p>
+                    Citizen services, departmental applications, workflow
+                    automation, digitisation, data integration and digital
+                    service platforms.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">04</div>
+                <h3>Solid Waste Management</h3>
+                <p>
+                    Vehicle and fleet tracking, route monitoring, collection
+                    monitoring, field applications, analytics and command
+                    centre integration.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">05</div>
+                <h3>Smart City & Urban Infrastructure</h3>
+                <p>
+                    Sensors, field devices, communication networks, software
+                    platforms, analytics and command-and-control systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">06</div>
+                <h3>Technology Sourcing & Partnerships</h3>
+                <p>
+                    Identification of suitable OEMs, software providers and
+                    specialised technology partners based on project
+                    requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">07</div>
+                <h3>Government & Infrastructure Technology</h3>
+                <p>
+                    Evaluation and solution development for new requirements
+                    where multiple technologies or partners need to work
+                    together.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHAT WE DO -->
+
+<section id="services">
+    <div class="container">
+
+        <div class="section-label">What We Do</div>
+
+        <h2 class="section-title">
+            From requirement to solution ecosystem.
+        </h2>
+
+        <p class="section-text">
+            We help organisations understand opportunities, identify suitable
+            technologies and coordinate the right partners for practical
+            project execution.
+        </p>
+
+        <div class="services-grid">
+
+            <div>
+
+                <div class="service-item">
+                    <div class="service-icon">01</div>
+                    <div>
+                        <h3>Understand Requirements</h3>
+                        <p>
+                            Understand project requirements, scope and expected
+                            outcomes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">02</div>
+                    <div>
+                        <h3>Identify Technology</h3>
+                        <p>
+                            Identify suitable technology options and solution
+                            partners.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">03</div>
+                    <div>
+                        <h3>Connect Partners</h3>
+                        <p>
+                            Connect OEMs, system integrators, software
+                            companies and implementation partners.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">04</div>
+                    <div>
+                        <h3>Map Requirements</h3>
+                        <p>
+                            Support solution discussions, requirement mapping
+                            and partner coordination.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="service-item">
+                    <div class="service-icon">05</div>
+                    <div>
+                        <h3>Develop Project Approach</h3>
+                        <p>
+                            Assist in developing a suitable project approach
+                            based on technical and commercial requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">06</div>
+                    <div>
+                        <h3>Business Collaboration</h3>
+                        <p>
+                            Support business collaboration for relevant
+                            government, infrastructure and institutional
+                            opportunities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">07</div>
+                    <div>
+                        <h3>Stakeholder Coordination</h3>
+                        <p>
+                            Coordinate with different stakeholders as an
+                            opportunity moves towards implementation.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PARTNERS -->
+
+<section class="partners" id="partners">
+    <div class="container">
+
+        <div class="section-label">Who We Work With</div>
+
+        <h2 class="section-title">
+            Building connections across the technology ecosystem.
+        </h2>
+
+        <p class="section-text">
+            We are open to working with organisations that bring strong
+            technology, implementation or market capabilities.
+        </p>
+
+        <div class="partner-grid">
+
+            <div class="partner">Technology OEMs & Product Companies</div>
+
+            <div class="partner">Software & Platform Providers</div>
+
+            <div class="partner">System Integrators</div>
+
+            <div class="partner">E-Governance & Smart City Companies</div>
+
+            <div class="partner">Infrastructure & EPC Companies</div>
+
+            <div class="partner">Implementation & Field-Service Partners</div>
+
+            <div class="partner">Banks & Financial Institutions</div>
+
+            <div class="partner">Consultants & Specialised Solution Providers</div>
+
+            <div class="partner">Government & Institutional Stakeholders</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHY UNIBOND -->
+
+<section id="why">
+    <div class="container">
+
+        <div class="section-label">Why Unibond</div>
+
+        <h2 class="section-title">
+            A flexible approach to technology partnerships.
+        </h2>
+
+        <div class="why-grid">
+
+            <div class="why-item">
+                <h3>Government & Infrastructure Understanding</h3>
+                <p>
+                    Understanding of government-facing technology and
+                    infrastructure opportunities.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Multiple Solution Domains</h3>
+                <p>
+                    Exposure to multiple solution domains rather than a
+                    single product category.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Partner Connectivity</h3>
+                <p>
+                    Ability to connect technology and implementation partners
+                    based on project needs.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Practical Solutions</h3>
+                <p>
+                    Focus on practical and commercially workable solutions.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Flexible Partnership Model</h3>
+                <p>
+                    Flexible partner-based approach for different types and
+                    sizes of opportunities.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Long-Term Relationships</h3>
+                <p>
+                    Long-term approach towards building reliable industry
+                    relationships.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- APPROACH -->
+
+<section class="approach">
+    <div class="container">
+
+        <div class="section-label">Our Approach</div>
+
+        <h2 class="section-title">
+            Simple. Practical. Partnership-driven.
+        </h2>
+
+        <p class="section-text">
+            Every opportunity is different. We first understand the requirement
+            and then identify the right combination of technology, products,
+            software, integration and implementation support.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <span>01</span>
+                <h3>Understand</h3>
+                <p>
+                    Understand the requirement, scope and project objectives.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>02</span>
+                <h3>Identify</h3>
+                <p>
+                    Identify the right technology, products and partners.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>03</span>
+                <h3>Connect</h3>
+                <p>
+                    Bring relevant organisations together around the
+                    opportunity.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>04</span>
+                <h3>Enable</h3>
+                <p>
+                    Help move the opportunity towards a practical solution
+                    and implementation.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+    <div class="container">
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+            If you have a technology, project requirement or partnership
+            opportunity in e-governance, smart mobility, urban infrastructure,
+            municipal technology or any related area, we would be happy to
+            connect and explore how we can work together.
+        </p>
+
+        <a href="#contact" class="btn">
+            Start a Conversation
+        </a>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <div class="section-label">Contact Us</div>
+
+        <h2 class="section-title">
+            Let's explore an opportunity together.
+        </h2>
+
+        <div class="contact-grid">
+
+            <div>
+                <p class="section-text">
+                    Technology Consulting | Solution Partnerships |
+                    Project Enablement
+                </p>
+            </div>
+
+            <div class="contact-card">
+
+                <div class="contact-row">
+                    <small>Company</small>
+                    <strong>Unibond Technologies</strong>
+                </div>
+
+                <div class="contact-row">
+                    <small>Email</small>
+                    <strong>[Official Email ID]</strong>
+                </div>
+
+                <div class="contact-row">
+                    <small>Phone</small>
+                    <strong>[Contact Number]</strong>
+                </div>
+
+                <div class="contact-row">
+                    <small>Location</small>
+                    <strong>[City, State]</strong>
+                </div>
+
+                <div class="contact-row">
+                    <small>Website</small>
+                    <strong>unibondtechnologies.com</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+                <div class="footer-logo">
+                    UNIBOND <span>TECHNOLOGIES</span>
+                </div>
+
+                <div class="footer-tagline">
+                    Technology Consulting | Solution Partnerships |
+                    Project Enablement
+                </div>
+            </div>
+
+            <div>
+                Connecting Technology. Enabling Opportunities.
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Unibond Technologies. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
