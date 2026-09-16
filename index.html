@@ -13,13 +13,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    .brand-logo {
+      display: block;
+      width: 190px;
+      height: auto;
+      max-height: 58px;
+      object-fit: contain;
+    }
+    .footer .brand-logo {
+      width: 170px;
+      max-height: 52px;
+    }
+    @media (max-width: 768px) {
+      .brand-logo { width: 155px; max-height: 48px; }
+      .footer .brand-logo { width: 155px; }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header" id="home">
   <div class="container nav-wrap">
     <a class="brand" href="#home" aria-label="Unibond Technologies home">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span><strong>Unibond</strong><small>Technologies</small></span>
+      <img src="assets/unibond-logo.png" alt="Unibond Technologies" class="brand-logo">
     </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Main navigation">
@@ -185,7 +202,9 @@
 
 <footer class="footer">
   <div class="container footer-grid">
-    <div><a class="brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Unibond</strong><small>Technologies</small></span></a><p>Technology Consulting | Solution Partnerships | Project Enablement</p><small>Connecting the right requirements, technologies and partners for government, infrastructure and digital transformation opportunities.</small></div>
+    <div><a class="brand" href="#home" aria-label="Unibond Technologies home">
+      <img src="assets/unibond-logo.png" alt="Unibond Technologies" class="brand-logo">
+    </a><p>Technology Consulting | Solution Partnerships | Project Enablement</p><small>Connecting the right requirements, technologies and partners for government, infrastructure and digital transformation opportunities.</small></div>
     <div><h4>QUICK LINKS</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#focus">Focus Areas</a><a href="#partners">Who We Work With</a><a href="#contact">Contact</a></div>
     <div><h4>CONTACT</h4><a href="mailto:sales@unibondtechnologies.com">sales@unibondtechnologies.com</a><span>+918279828992</span><span>Delhi, India</span></div>
   </div>
